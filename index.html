@@ -1,0 +1,316 @@
+JOSEPHINE 👩‍🍳, [6/7/2025 7:38 PM]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SubDepth Elite - Luxury Submarine Hire</title>
+  <style>
+    /* Color Palette */
+    :root {
+      --deep-blue: #003f5c;
+      --teal: #2f4b7c;
+      --light-teal: #665191;
+      --gold: #ffa600;
+      --white: #ffffff;
+      --gray-light: #f4f4f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gray-light);
+      color: var(--deep-blue);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--deep-blue);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header > div {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    header button {
+      background-color: var(--gold);
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      color: var(--deep-blue);
+      transition: background-color 0.3s ease;
+    }
+
+    header button:hover {
+      background-color: #cc8500;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--teal);
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .service-item {
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      color: var(--deep-blue);
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--gold);
+    }
+
+    .service-item h3 {
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .service-item p {
+      font-size: 1rem;
+    }
+
+    .pricing-table {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .price-card {
+      background: var(--white);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+      width: 220px;
+      text-align: center;
+      color: var(--deep-blue);
+    }
+
+    .price-card h3 {
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .price-card p {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    #gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 2px solid var(--teal);
+      border-radius: 5px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background-color: var(--gold);
+      border: none;
+      padding: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 5px;
+
+JOSEPHINE 👩‍🍳, [6/7/2025 7:38 PM]
+cursor: pointer;
+      color: var(--deep-blue);
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #cc8500;
+    }
+
+    footer {
+      background: var(--deep-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      .services-list, .pricing-table {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #gallery {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>SubDepth Elite</h1>
+    <p>Luxury Submarine Hire - Explore the Depths in Style</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Book Now</button>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    SubDepth Elite provides private, luxury submarine experiences for elite individuals and researchers looking to explore the deep ocean in style and safety. We offer worldwide service, including flight coverage from anywhere in the USA.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-list">
+    <div class="service-item">
+      <h3>Luxury Tours</h3>
+      <p>Enjoy underwater scenery in comfort and elegance.</p>
+    </div>
+    <div class="service-item">
+      <h3>Research Missions</h3>
+      <p>Rent submarines for marine exploration and data capture.</p>
+    </div>
+    <div class="service-item">
+      <h3>Private Hire</h3>
+      <p>Custom travel for VIPs and exclusive underwater events.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing-table">
+    <div class="price-card">
+      <h3>Luxury Day Trip</h3>
+      <p>$8,500</p>
+    </div>
+    <div class="price-card">
+      <h3>Extended Expedition</h3>
+      <p>$15,000</p>
+    </div>
+    <div class="price-card">
+      <h3>Elite Custom</h3>
+      <p>From $25,000</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <img src="images/submarine1.jpg" alt="Submarine 1">
+  <img src="images/submarine2.jpg" alt="Submarine 2">
+  <img src="images/submarine3.jpg" alt="Submarine 3">
+</section>
+
+<section id="contact">
+  <h2>Book Now</h2>
+  <form action="mailto:subdeptheliteinfo@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Describe your request" required></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 SubDepth Elite | Website by Josephine</p>
+</footer>
+
+</body>
+</html>
